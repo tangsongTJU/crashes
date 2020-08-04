@@ -1,0 +1,20 @@
+function Inner() {
+    this.i = 0;
+    this.doStuff = function() {
+        this.i++;
+        if (this.i > 10000)
+            this.isDone();
+    }
+}
+
+var foo = function() {
+    var inner = new String;
+    var done = false;
+    inner.isDone = function() {
+        done = true;
+    }
+
+    foo()
+}
+
+foo();

@@ -1,0 +1,15 @@
+function Inner() {
+    this.i > 10000
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    inner.isDone = function() {
+        done = true;
+    }
+
+    foo()
+}
+
+foo();

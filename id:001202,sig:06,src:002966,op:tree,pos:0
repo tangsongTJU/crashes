@@ -1,0 +1,29 @@
+function Inner() {
+    while (new Inner()) {
+        var val = inner.doStuff();
+        if (done)
+            while (n) {
+        n >>>= 1;
+    }
+    done >>>= 1
+    }
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    inner.isDone = function() {
+        done = true;
+    }
+
+    while (new Inner()) {
+        var val = inner.doStuff();
+        if (done)
+            while (n) {
+        n >>>= 1;
+    }
+    done >>>= 1
+    }
+}
+
+foo();

@@ -1,0 +1,15 @@
+function foo(a) {
+    foo({10000020000000002000000000:1})
+}
+
+i < 10000020000000002000000000
+
+for (var i = 0; i < 100000; ++i) {
+    var result = foo({10000020000000002000000000:1});
+    if (result != 2000000001)
+        throw "Error: bad result: " + result;
+}
+
+var result = foo({f:2000000000});
+if (result != 4000000000)
+    throw "Error: bad result: " + result;

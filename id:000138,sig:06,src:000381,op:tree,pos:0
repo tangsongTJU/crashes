@@ -1,0 +1,24 @@
+function Inner() {
+    Inner();
+    this.doStuff = function() {
+        '1Z' + String.fromCharCode(index)++;
+        if (this.i > 10000)
+            this.isDone();
+    }
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    inner.isDone = function() {
+        done = true;
+    }
+
+    while (true) {
+        var val = inner.doStuff();
+        if (done)
+            break;
+    }
+}
+
+foo();

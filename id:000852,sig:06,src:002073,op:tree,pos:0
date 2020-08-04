@@ -1,0 +1,10 @@
+function Inner() {
+    '';
+    0
+}
+
+var foo = function() {
+    foo()
+}
+
+foo();

@@ -1,0 +1,9 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    foo(indexP)
+    return ''[0];
+}
+var indexP;
+var indexO = 0;
+foo(indexP)

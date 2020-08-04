@@ -1,0 +1,11 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    while (n) {
+        n >>>= 1;
+    }
+    return Object.defineProperty(arguments, 0, {configurable: true, enumerable: true, writable:true, value:42})[n >>>= 1][foo(indexP)];
+}
+var indexP;
+var indexO = 0;
+foo(indexP)

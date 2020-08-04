@@ -1,0 +1,17 @@
+function Inner() {
+    Inner()
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    ''[0]
+
+    while (true) {
+        var val = inner.doStuff();
+        if (done)
+            break;
+    }
+}
+
+foo();

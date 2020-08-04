@@ -1,0 +1,21 @@
+//@ skip if $architecture == "x86"
+
+var n = foo(!(i % 100));
+
+function bar() { }
+
+function foo(i) {
+    var result = (i % 100);
+    var set = function (x) { result = (set); }
+    foo(!(i % 100))
+    return result;
+}
+
+noInline(bar);
+noInline(foo);
+
+for (var i = 0; i < n; i++) {
+    var result = foo(!(i % 100));
+    if (result != 0)
+        throw "Error: bad result: " + result;
+}

@@ -1,0 +1,7 @@
+function Inner() {
+    Inner()
+}
+
+var foo = new Inner()
+
+foo();

@@ -1,0 +1,10 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    foo("42")
+    return 1e40[0];
+}
+var indexP;
+var indexO = 0;
+foo("42")
+1e40

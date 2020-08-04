@@ -1,0 +1,28 @@
+function Inner() {
+    0;
+    this.doStuff = function() {
+    var inner = this;
+    var done = false;
+    inner > 10000
+
+    while (true) {
+        var val = inner.doStuff();
+        if (done)
+            break;
+    }
+}
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    this.i > 10000
+
+    while (true) {
+        var val = inner.doStuff();
+        if (done)
+            break;
+    }
+}
+
+foo();

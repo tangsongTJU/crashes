@@ -1,0 +1,17 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    while (n) {
+        n >>>= 1;
+    }
+    foo(index = index)
+}
+var indexP;
+var indexO = 0;
+for (var index = 0; index <= 100; index++) {
+    if (index - index - index) {
+                    var hexP = foo(index = index);
+                    index - index
+                    index = index;
+                }
+}

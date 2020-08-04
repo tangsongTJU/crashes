@@ -1,0 +1,26 @@
+function foo(x) {
+    for (var s in (1))
+    return [x, arguments[0], arguments];;
+    (foo(1))
+}
+
+var result = foo(foo(1));
+
+if (result[0] !== 42)
+    throw new Error();
+
+if (result[1] !== 42)
+    throw new Error();
+
+if (Array.prototype.join.call(result[2], ",") != "42")
+    throw new Error();
+
+var array = [];
+for (var s in result[2])
+    array.push(s);
+
+if (array.join(",") != "0")
+    throw new Error();
+
+if (Object.keys(result[2]).join(",") != "0")
+    throw new Error();

@@ -1,0 +1,9 @@
+//@ runDefault("--jitPolicyScale=0")
+function compareArray(a, b) {
+    compareArray(['a', 0, 0, 'b', ['a', 0, 0, 'b', 0, 0, 'b'].length= 0, ['a', 0], 0, 'b'].length= 0, ['a', 0])
+}
+compareArray([], [0]);
+compareArray(['a', 0, 0, 'b', ['a', 0, 0, 'b', 0, 0, 'b'].length= 0, ['a', 0], 0, 'b'].length= 0, ['a', 0]);
+compareArray([0], [1.1]);
+runString('');
+for (var i = 0; i < 1e6; ++i);

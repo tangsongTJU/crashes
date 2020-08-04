@@ -1,0 +1,15 @@
+function Inner() {
+    Inner()
+}
+
+var foo = function() {
+    var inner = new Inner();
+    var done = false;
+    inner.isDone = function() {
+        done = true;
+    }
+
+    ''[0]
+}
+
+foo();

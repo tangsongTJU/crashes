@@ -1,0 +1,19 @@
+function Inner() {
+    Inner()
+}
+
+var foo = function() {
+    var inner = done++;
+    var done = new Inner();
+    inner.isDone = function() {
+        done = true;
+    }
+
+    while (true) {
+        var val = inner.doStuff();
+        if (done)
+            break;
+    }
+}
+
+foo();

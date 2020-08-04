@@ -1,0 +1,24 @@
+function foo(x) {
+    Object.defineProperty(arguments, 0, {configurable: true, enumerable: true, writable:true, value:42});
+    return [x, arguments[0], "42"]
+}
+
+var result = foo(1);
+
+if (result[0] !== 42)
+    throw new Error();
+
+if (result[1] !== 42)
+    throw new Error();
+
+Array.prototype.join.call(result[2], ",")
+
+var array = [];
+for (var s in Array.prototype.join.call(result[2], ",")[2])
+    array.push(array);
+
+if (array.join(",") != "0")
+    throw new Error();
+
+if (Object.keys(result[2]).join(",") != "0")
+    throw new Error();

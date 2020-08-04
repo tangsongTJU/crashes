@@ -1,0 +1,9 @@
+function Inner() {
+    String
+}
+
+var foo = function() {
+    foo()
+}
+
+foo();

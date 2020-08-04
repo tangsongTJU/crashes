@@ -1,0 +1,11 @@
+function Inner() {
+    this.i++;
+        if (this.i > 10000)
+            this.isDone();
+}
+
+var foo = function() {
+    foo()
+}
+
+foo();

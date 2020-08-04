@@ -1,0 +1,11 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    while (''[arguments >>>= 1]) {
+        n >>>= 1;
+    }
+    foo(indexP)
+}
+var indexP;
+var indexO = 0;
+foo(indexP)

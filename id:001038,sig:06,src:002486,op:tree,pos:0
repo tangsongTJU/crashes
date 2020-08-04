@@ -1,0 +1,12 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    while (foo("42")) {
+        for (var i = 0; i < ++i; ++i)
+    array.push(-(1024 * 1024 * 1024 * 1024 + i));;
+    }
+    return ''[0];
+}
+var indexP;
+var indexO = 0;
+foo("42")

@@ -1,0 +1,11 @@
+function Inner() {
+    while (n) {
+        n >>>= 1;
+    }
+}
+
+var foo = function() {
+    foo()
+}
+
+foo();

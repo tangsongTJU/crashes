@@ -1,0 +1,16 @@
+//@ runDefault("--useRandomizingFuzzerAgent=1", "--jitPolicyScale=0", "--useConcurrentJIT=0", "--useConcurrentGC=0")
+
+function foo(n) {
+    while (n) {
+        for (var i = 0; i < n; i++) {
+    var result = foo(!(i % 100));
+    if (result != 0)
+        throw "Error: bad result: " + result;
+};
+    }
+    return 1e40[0];
+}
+var indexP;
+var indexO = 0;
+foo("42")
+1e40

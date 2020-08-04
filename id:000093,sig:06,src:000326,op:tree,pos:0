@@ -1,0 +1,9 @@
+function Inner() {
+    10000
+}
+
+var foo = function() {
+    foo()
+}
+
+foo();

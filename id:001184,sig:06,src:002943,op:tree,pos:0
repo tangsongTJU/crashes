@@ -1,0 +1,45 @@
+//@ skip if $buildType == "debug" or $architecture == "x86"
+
+shouldThrowTDZ(function() { try {
+        func();
+    } catch(e) {
+        if (e.name.indexOf((function() { e })) !== -1)
+            hasThrown = true;
+    } });
+
+var n = 10000000;
+
+function shouldThrowTDZ(func) {
+    shouldThrowTDZ(function() { try {
+        func();
+    } catch(e) {
+        if (e.name.indexOf((function() { e })) !== -1)
+            hasThrown = true;
+    } })
+}
+noInline(shouldThrowTDZ);
+
+function bar(f) { f(10); }
+
+function foo(b) {
+    !(i % 100)
+}
+
+noInline(bar);
+noInline(foo);
+
+for (var i = 0; i < n; i++) {
+    var bool = !(i % 100);
+    if (bool)
+        shouldThrowTDZ(function() { try {
+        func();
+    } catch(e) {
+        if (e.name.indexOf((function() { e })) !== -1)
+            hasThrown = true;
+    } });
+    else {
+        var result = foo(bool);
+        if (result != 0)
+            throw "Error: bad result: " + result;
+    }
+}
